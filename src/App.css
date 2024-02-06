@@ -1,0 +1,117 @@
+* { 
+    user-select: none;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+    font-weight: 700;
+}
+
+body{
+    display: grid;
+    margin: 20px;
+    place-items: center;
+}
+
+#root {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 0.7fr 0.3fr 0.7fr;
+}
+
+.title{
+    line-height: 50px;
+    font-size: 50px;
+}
+
+.title:nth-child(2n){
+    color:#40b988
+}
+
+.title:nth-child(3n){
+    color:#444
+}
+
+.balotas {
+    border-radius: 10px;
+    width: 600px;
+    padding: 10px;
+    gap:5px;
+    background-color: azure;
+    max-width: 80%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.balota {
+    transition: transform 0.8s;
+    transform: rotateY(-180deg);
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.active{
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    background-color: #40b988;
+}
+
+.controls{
+    display: grid;
+    place-items: center;
+}
+
+button{
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #40b988;
+    color: black;
+    border: none;
+    padding: 20px;
+}
+
+.cartones{
+    grid-template-columns: repeat(2,1fr);
+    display:grid;
+    gap:20px
+}
+
+.carton-numeros{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: rgb(161, 161, 161);
+    border-radius:10px;
+    padding: 20px;
+    gap:5px
+}
+.nombre-jugador{
+    text-align: center;
+    color: #40b988;
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+.ficha{
+    transition:0.6s all;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: aliceblue;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ficha:nth-child(13){
+    background-color: black;
+}
+
+.tachada{
+    background-color: #40b988;
+}
